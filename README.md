@@ -2,6 +2,8 @@
 
 # Screenshot Of Project
 
+<img src="./assets/images/screenshot.jpg" alt="A picture of the product in action">
+
 # Video Of Project
 
 # Description
