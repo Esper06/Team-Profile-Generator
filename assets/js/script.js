@@ -119,7 +119,7 @@ const addEmployee = () => {
 
 //this creates the file.
 const writeFile = data => {
-    fs.writeFile('../index.html', data, err => { //we choose the location it creates it and then give it the data it will be using
+    fs.writeFile('../../index.html', data, err => { //we choose the location it creates it and then give it the data it will be using
 
         if (err) { //if there is an error then log the error. Otherwise log that it's been made
             console.error(err);
