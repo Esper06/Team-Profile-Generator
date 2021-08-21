@@ -2,15 +2,19 @@
     box-sizing: border-box;
 }
 
+/* This is a root selector that allows to to make a css variable and set it to multiple classes or ids. Here we've made a lot of colour variables */
 :root {
-    --primary: lightslategray;
+    --primary: red;
     --secondary: white;
+    --cardHead: blue;
+    --cardText: black;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Styles the very top of the page. The top bit is red and the text inside is white */
 #navbar {
     background-color: var(--primary);
     color: var(--secondary);
@@ -21,15 +25,16 @@ body {
     font-size: 50px;
 }
 
-
+/* Styles the cards, the tops are blue and the text is white */
 .card-header {
-    background-color: var(--primary);
+    background-color: var(--cardHead);
     color: var(--secondary);
 }
 
+/* Styles the inside of the cards. The background is white and the text is black */
 .card-body {
     background-color: var(--secondary);
-    color: var(--primary);
+    color: var(--cardText);
 }
 
 .container {
