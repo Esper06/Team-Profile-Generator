@@ -6,6 +6,8 @@
 
 # Video Of Project
 
+<a href="https://drive.google.com/file/d/1YbjHv5TBf9WR5LEpj8hXHNRCxJhUC7dA/view?usp=sharing">Link to video</a>
+
 # Description
 
 A terminal based program that will ask the user various questions based on employee members that they wish to add to their team. A html file with profile cards displaying this information will then be made.
