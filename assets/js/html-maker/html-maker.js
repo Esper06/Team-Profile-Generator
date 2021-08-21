@@ -66,7 +66,7 @@ const generateIntern = function (intern) {
 
 //this function will get the data aquired from inquirer, assign it to the above functions and then push the resulting html into an array.
 //this array will then be inserted into the main html.
-generateHtml = (data) => { //note that 'data' here is the data gotten from inquire, this wont apply until we export this file
+htmlMaker = (data) => { //note that 'data' here is the data gotten from inquire, this wont apply until we export this file
 
     for (let i = 0; i < data.length; i++) {
         const employee = data[i]; //makes it so that whatever loop we are on is the employee we are making the card for

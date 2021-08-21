@@ -134,7 +134,7 @@ const writeFile = data => {
 addManager() //we call the addManager function
     .then(addEmployee) //then we call the addEmployee function
     .then(teamArray => {
-        return htmlMaker(teamArray); //then we bring in the htmlMaker file. This allows us to assign the data from the prompts in this file to the html in that one
+        return htmlMaker(teamArray); //then we bring in the html-maker file. This allows us to assign the data from the prompts in this file to the html in that one
     })
     .then(pageHTML => {
         return writeFile(pageHTML); //finally we run writeFile and create the html file
