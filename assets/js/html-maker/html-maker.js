@@ -1,8 +1,6 @@
 /*  The contents of this file are useless on their own, but we will export them and use the functions 
 here to generate our html */
 
-const { generate } = require("rxjs");
-
 //an array that we will need later in our code
 var cardArray = [];
 

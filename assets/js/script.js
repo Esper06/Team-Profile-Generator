@@ -2,18 +2,15 @@
 const htmlMaker = require('./html-maker/html-maker');
 
 //We bring in our card constructors
-const manager = require('./constructors/manager');
-const engineer = require('./constructors/engineer');
-const intern = require('./constructors/intern');
+const Manager = require('./constructors/manager');
+const Engineer = require('./constructors/engineer');
+const Intern = require('./constructors/intern');
 
 //We need this for inquirer to work
 const fs = require('fs');
 
 //We bring in inquirer
 const inquirer = require('inquirer');
-const InputPrompt = require('inquirer/lib/prompts/input');
-const Manager = require('./constructors/manager');
-const Employee = require('./constructors/base');
 
 //an array we will be using later
 const teamArray = [];
@@ -120,3 +117,28 @@ const addEmployee = () => {
     })
 };
 
+//this creates the file.
+const writeFile = data => {
+    fs.writeFile('../index.html', data, err => { //we choose the location it creates it and then give it the data it will be using
+
+        if (err) { //if there is an error then log the error. Otherwise log that it's been made
+            console.error(err);
+            return;
+        } else {
+            console.log("Your profile has been created!")
+        }
+
+    })
+};
+
+addManager() //we call the addManager function
+    .then(addEmployee) //then we call the addEmployee function
+    .then(teamArray => {
+        return htmlMaker(teamArray); //then we bring in the htmlMaker file. This allows us to assign the data from the prompts in this file to the html in that one
+    })
+    .then(pageHTML => {
+        return writeFile(pageHTML); //finally we run writeFile and create the html file
+    })
+    .catch(err => {
+        console.error(err); //if there are any errors then they should get caught here
+    });
